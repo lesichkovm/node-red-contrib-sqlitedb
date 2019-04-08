@@ -1,0 +1,16 @@
+{
+  "name": "red-contrib-sqlitedb",
+  "version": "1.0.0",
+  "description": "Sends SQL queries to SQLiteDB",
+  "main": "sqlitedb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+  "node-red" : {
+    "nodes": {
+        "sqlitedb": "sqlitedb.js"
+    }
+  }
+}
