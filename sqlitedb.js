@@ -7,5 +7,5 @@ module.exports = function(RED) {
             node.send(msg);
         });
     }
-    RED.nodes.registerType("sqlidb",SqliteDbNode);
+    RED.nodes.registerType("sqlitedb",SqliteDbNode);
 }
