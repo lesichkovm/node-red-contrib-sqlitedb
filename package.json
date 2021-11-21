@@ -1,7 +1,11 @@
 {
     "name": "node-red-contrib-sqlitedb",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "description": "Sends SQL queries to an SQLite cloud database provided as a service at <a href=\"https://www.sqlitedb.com/\" target=\"_blank\">https://www.sqlitedb.com/</a>",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:lesichkovm/node-red-contrib-sqlitedb.git"
+    },
     "keywords": [
         "sqlitedb",
         "node-red"
