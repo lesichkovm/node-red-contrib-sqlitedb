@@ -12,6 +12,8 @@ module.exports = function (RED) {
 
 
         node.on('input', function (msg) {
+
+            // Sets the SQL if it comes via msg.topic
             if (sqlquery == "msg.topic") {
                 if (typeof msg.topic !== 'string') {                    
                     node.error("msg.topic : the query is not defined as string", msg);
@@ -31,6 +33,8 @@ module.exports = function (RED) {
 
                 sql = msg.topic;
             }
+
+            // Post the SQL to the SqliteDB API
             axios({
                 method: 'post',
                 responseType: 'json',
@@ -51,5 +55,7 @@ module.exports = function (RED) {
             });
         });
     }
+
+    // Registering the node-red type
     RED.nodes.registerType("sqlitedb", SqliteDbNode);
 }
