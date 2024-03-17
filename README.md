@@ -40,8 +40,10 @@ user interface:
 
 The node provides two methods for providing the SQL code for the query:
 <br />
+
 - <i>fixed</i> - convenient for permanent SQL statements. The SQL is entered directly in the node configurator.
 <br />
+
 - <i>msg.topic</i> - for dynamic statements. The SQL is composed via a functions node and appended to the message's topic attribute before sent onwards.
 
 
@@ -49,14 +51,20 @@ Using any SQL query, the result is returned in <code>msg.payload</code>.
 After submitting the query a response message in the payload will be
 returned in the following format:
 <br />
-- Success response<br />
+
+- Successful response<br />
 <code>{"status":"success","message":"Message text","data":[]}</code>
-- Success response<br />
+<br />
+
+- Error response<br />
 <code>{"status":"error","message":"Message text"}</code>
 <br />
+
 Checking the "status" attribute allows to find out if the SQL query
 was executed successfully.
 <br />
+
 Checking the "message" attribute allows to find out more information about the query's result.
 <br />
+
 The "data" attribute contains the records returned by SELECT type queries.
